@@ -4,3 +4,6 @@
 [submodule "facebookapp/Plugin/DebugKit"]
 	path = facebookapp/Plugin/DebugKit
 	url = https://github.com/cakephp/debug_kit.git
+[submodule "facebookapp/Plugin/TwitterBootstrap"]
+	path = facebookapp/Plugin/TwitterBootstrap
+	url = https://github.com/slywalker/TwitterBootstrap.git

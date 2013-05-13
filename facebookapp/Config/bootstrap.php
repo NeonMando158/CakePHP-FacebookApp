@@ -111,3 +111,5 @@ CakeLog::config('error', array(
 CakePlugin::load('DebugKit');
 
 CakePlugin::load('FacebookUsers', array('bootstrap' => false, 'routes' => false));
+
+CakePlugin::load('TwitterBootstrap');
