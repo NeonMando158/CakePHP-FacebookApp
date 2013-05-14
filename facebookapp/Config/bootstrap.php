@@ -113,3 +113,4 @@ CakePlugin::load('DebugKit');
 CakePlugin::load('FacebookUsers', array('bootstrap' => false, 'routes' => false));
 
 CakePlugin::load('TwitterBootstrap');
+Configure::write('TwitterBootstrap.App.name', 'New FaceBook App');
