@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>
-			<?php echo __('CakePHP: the rapid development php framework:'); ?>
+			<?php echo Configure::read('TwitterBootstrap.App.name'); ?>
 			<?php echo $title_for_layout; ?>
 		</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,22 +51,30 @@
 						</a>
 						<a class="brand" href="#"><?= Configure::read('TwitterBootstrap.App.name') ?></a>
 						<div class="nav-collapse">
-							<ul class="nav">
-								<li class="active"><a href="#">Home</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#contact">Contact</a></li>
-							</ul>
+							<?= $this->element('nav_links') ?>
 						</div><!--/.nav-collapse -->
 					</div>
 				</div>
 			</div>
 
 			<div class="container">
-
-				<h1>Bootstrap starter template</h1>
-
+				<? if ($this->here != '/'): ?>
+					<?=
+					$this->Html->getCrumbList(array(
+					    'class' => 'breadcrumb',
+					    'last' => 'active',
+					    'separator' => '<li><span class="divider">/</span></li>'
+						), 'Home')
+					?>
+				<? endif; ?>
 				<?php echo $this->Session->flash(); ?>
 
+				<?php
+				echo $this->Session->flash('auth', array(
+				    'element' => 'alert',
+				    'params' => array('plugin' => 'TwitterBootstrap'),
+				));
+				?>
 				<?php echo $this->fetch('content'); ?>
 
 			</div> <!-- /container -->
