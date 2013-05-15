@@ -49,7 +49,7 @@
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</a>
-						<a class="brand" href="#"><?= Configure::read('TwitterBootstrap.App.name') ?></a>
+						<a class="brand" href="/"><?= Configure::read('TwitterBootstrap.App.name') ?></a>
 						<div class="nav-collapse">
 							<?= $this->element('nav_links') ?>
 						</div><!--/.nav-collapse -->

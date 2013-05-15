@@ -2,7 +2,7 @@
 $nav_links = array(
     'Home' => '/',
     'About' => array('admin' => false, 'plugin' => null, 'controller' => 'pages', 'action' => 'about'),
-    'Contact' => array('admin' => false, 'plugin' => null, 'controller' => 'pages', 'action' => 'contact'),
+	//'Contact' => array('admin' => false, 'plugin' => null, 'controller' => 'pages', 'action' => 'contact'),
 );
 /*
 if(AuthComponent::user('id')){
@@ -10,7 +10,7 @@ if(AuthComponent::user('id')){
 } else {
         $nav_links['Log In'] = array('admin' => false, 'plugin' => null, 'controller' => 'users', 'action' => 'login');
 }
- * 
+ *
  */
 ?>
 <ul class="nav">
