@@ -36,55 +36,20 @@ class AppController extends Controller {
 	public $components = array(
 	    'DebugKit.Toolbar',
 	    'Auth',
-	    'Session'
+	    'Session',
+	    'FacebookCanvas.Canvas'
 	);
 	public $helpers = array(
 	    'Session',
 	    'Html' => array('className' => 'TwitterBootstrap.BootstrapHtml'),
 	    'Form' => array('className' => 'TwitterBootstrap.BootstrapForm'),
 	    'Paginator' => array('className' => 'TwitterBootstrap.BootstrapPaginator'),
+	    'FacebookCanvas.FacebookCanvas'
 	);
 	public $layout = 'facebook-app';
 
 	public function beforeFilter() {
-		$this->_setupAuth();
-	}
-
-	protected function _setupAuth() {
-		$currentUser = array();
-
-		$this->Auth->authorize = array('Controller');
-		$this->Auth->authenticate = array(
-		    'Form' => array(
-			'fields' => array(
-			    'username' => 'email',
-			    'password' => 'password'
-			),
-			'userModel' => 'FacebookService.FacebookUser',
-			'scope' => array(
-			    'User.active' => 1
-			)
-		    )
-		);
-		$this->Auth->allow('display');
-
-		$this->Auth->loginRedirect = '/';
-		$this->Auth->logoutRedirect = '/';
-		$this->Auth->loginAction = array(
-		    'admin' => false,
-		    'plugin' => 'facebook_users',
-		    'controller' => 'facebook_users',
-		    'action' => 'login',
-		);
-
-		$this->Auth->unauthorizedRedirect = '/';
-		$this->Auth->authError = 'Did you really think you are allowed to see that?';
-		if ($this->Auth->user()) {
-			$currentUser = $this->Auth->user();
-		}
-		$this->set('currentUser', $currentUser);
-		$this->set('loginAction', $this->Auth->loginAction);
-		$this->set('logoutAction', $this->Auth->logoutAction);
+		$this->Auth->login();
 	}
 
 	protected function flashError($msg) {
@@ -114,9 +79,7 @@ class AppController extends Controller {
 			//we are in an admin section
 			return (bool) $user['is_admin'];
 		}
-		if ($user['is_guest']) {
-
-		}
+		return true;
 	}
 
 }

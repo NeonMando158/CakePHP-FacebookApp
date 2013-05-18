@@ -2,6 +2,8 @@
 $nav_links = array(
     'Home' => '/',
     'About' => array('admin' => false, 'plugin' => null, 'controller' => 'pages', 'action' => 'about'),
+    'App Users' => array('admin' => false, 'plugin' => 'facebook_canvas', 'controller' => 'canvas_users', 'action' => 'index'),
+    'Test' => array('admin' => false, 'plugin' => null, 'controller' => 'pages', 'action' => 'fb'),
 	//'Contact' => array('admin' => false, 'plugin' => null, 'controller' => 'pages', 'action' => 'contact'),
 );
 /*

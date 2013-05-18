@@ -11,7 +11,7 @@ $this->Html->addCrumb('About us');
     'You did,' said the Mock Turtle.</p>
     <div>
         <span class="badge badge-success">Posted 2012-08-02 20:47:04</span><div class="pull-right"><span class="label">alice</span> <span class="label">story</span> <span class="label">blog</span> <span class="label">personal</span></div>
-    </div> 
+    </div>
     <hr>
     <h1>Revolution has begun!</h1>
     <p>'I am bound to Tahiti for more men.'
@@ -19,6 +19,6 @@ $this->Html->addCrumb('About us');
         'Cross your arms, sir; throw back your head. Now, repeat after me. As soon as Steelkilt leaves me, I swear to beach this boat on yonder island, and remain there six days. If I do not, may lightning strike me!'A pretty scholar,' laughed the Lakeman. 'Adios, Senor!' and leaping into the sea, he swam back to his comrades.</p>
     <div>
         <span class="badge badge-success">Posted 2012-08-02 20:47:04</span><div class="pull-right"><span class="label">alice</span> <span class="label">story</span> <span class="label">blog</span> <span class="label">personal</span></div>
-    </div>     
+    </div>
     <hr>
 </div>

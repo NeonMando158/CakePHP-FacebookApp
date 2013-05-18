@@ -110,7 +110,11 @@ CakeLog::config('error', array(
 
 CakePlugin::load('DebugKit');
 
-CakePlugin::load('FacebookUsers', array('bootstrap' => false, 'routes' => false));
+CakePlugin::load('FacebookCanvas', array('bootstrap' => false, 'routes' => false));
+Configure::write('FacebookApp.app_id', '380240352094271');
+Configure::write('FacebookApp.app_secret', '556367c78257f6fe5212ca7206c3abb2');
+Configure::write('FacebookApp.scope', array('email'));
+Configure::write('FacebookApp.canvas_page', 'https://apps.facebook.com/cakephp-facebookapp/');
 
 CakePlugin::load('TwitterBootstrap');
 Configure::write('TwitterBootstrap.App.name', 'New FaceBook App');
